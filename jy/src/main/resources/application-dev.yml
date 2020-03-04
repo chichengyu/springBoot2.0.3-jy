@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/jy?useUnicode=true&characterEncoding=utf8&useSSL=false
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      username: root
+      password: 123456
+      minimum-idle: 5  # 最小空闲连接数量
+      idle-timeout: 180000 # 空闲连接存活最大时间，默认600000（10分钟）
+      maximum-pool-size: 10 # 连接池最大连接数,默认是10
+      auto-commit: true # 此属性控制从池返回的连接的默认自动提交行为,默认值：true
+      pool-name: HikariCP # 连接池名称
+      max-lifetime: 1800000 # 此属性控制池中连接的最长生命周期,值0表示无限生命周期,默认1800000即30分钟
+      connection-timeout: 30000 # 数据库连接超时时间,默认30秒,即30000
+
+# 日志处理
+logging:
+  level:
+    root: info
+    com.jy: debug
+  file: d:/logs/jy/jy-dev.log
+
+
+#=================================微信相关====================================
+#公众号 以及 #微信商户平台支付配置
+wxpay:
+  appid: wx5beac15ca207c40c
+  appsecret: 554801238f17fd6f96b382fe548215e9
+  mer_id: 1503809911
+  key: xdclassdevsq2018xdclass2018x018d
+  callback: 16web.tunnel.qydev.com/api/v1/wechat/order/callback
+
+#微信开放平台配置 (扫描登陆)
+wxopen:
+  appid: wx025575eac69a2d5b
+  appsecret: deeae310a387fa9d3e8f3830ce64caac
+  redirect_url: http://16web.tunnel.qydev.com/api/v1/wechat/user/callback #重定向url

@@ -1,0 +1,28 @@
+#############################################################
+########################## 公共配置 ##########################
+#############################################################
+
+spring:
+  profiles:
+    active: dev
+
+
+# mybatis   使用注解开发，不用词配置
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true # 表字段与实体类 大小写映射
+#  type-aliases-package: com.jy.pojo
+#  mapper-locations: classpath:mapper/*.xml
+
+
+# pagehelper 配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+
+############################################################
+# Server - tomcat 相关常用配置
+############################################################
+server:
+  tomcat:
+    uri-encoding: UTF-8 # tomcat的URI编码
