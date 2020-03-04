@@ -2,7 +2,7 @@
 
 ##### 项目： 小D课题 - IT在线教育平台
 
-微信扫码登陆、微信支付（手动封装SDK）、谷歌二维码生成、api接口跨域，JWT令牌、tools 热部署、订单编号生成类、logback日志（包括日志统计数据）、idea Database方式生成实体类、mybatis注解开发。
+微信扫码登陆、微信支付（手动封装SDK）、谷歌二维码生成、api接口跨域，JWT令牌、tools 热部署、订单编号生成类、logback日志（包括日志统计数据）、idea Database方式生成实体类、mybatis注解开发、生产环境搭建部署、集群部署。
 
 
 pom.xml
